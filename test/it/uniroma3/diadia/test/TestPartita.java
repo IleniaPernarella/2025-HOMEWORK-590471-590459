@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;
 
@@ -12,11 +13,12 @@ public class TestPartita {
 
 	private Partita partita;
 	private Stanza stanza;
-	
+	private IO io;
 	
 	@Before
 	public void setUp() {
-		partita=new Partita();
+		
+		partita=new Partita(io);
 		stanza=new Stanza("n11");
 	}
 	
